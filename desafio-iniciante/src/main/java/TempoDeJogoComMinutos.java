@@ -22,14 +22,15 @@ public class TempoDeJogoComMinutos {
         Integer horaEntrada = input.nextInt();
         Integer minutoEntrada = input.nextInt();
 
-
         Integer horaSaida = input.nextInt();
         Integer minutoSaida = input.nextInt();
 
         Integer horaParametro = 0;
         Integer minutoParametro = 0;
 
-    while ((!horaEntrada.equals(horaSaida) || !minutoEntrada.equals(minutoSaida)) || (horaEntrada.equals(horaSaida) && minutoEntrada.equals(minutoSaida) && (minutoParametro.equals(0) && horaParametro.equals(0)))){ //se a horaEntrada ou o minutoEntrada forem diferentes das saídas ou a horaEntrada e minutoEntrada forem iguais mas os parametros forem 0
+    while ((!horaEntrada.equals(horaSaida) || !minutoEntrada.equals(minutoSaida))
+            ||
+            (horaEntrada.equals(horaSaida) && minutoEntrada.equals(minutoSaida) && (minutoParametro.equals(0) && horaParametro.equals(0)))){ //se a horaEntrada ou o minutoEntrada forem diferentes das saídas ou a horaEntrada e minutoEntrada forem iguais mas os parametros forem 0
         minutoParametro++;
         minutoEntrada++;
         if(minutoEntrada.equals(60)){ // zera o minutoEntrada quando chegar em 60 e soma 1 na horaEntrada
